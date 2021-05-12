@@ -1,20 +1,222 @@
 /* import Font */
 @font-face {
-  font-family: sanspro;
-  src: local("./assets/SourceSansPro-Regular.otf");
-}
-@font-face {
-  font-family: sanspro_bold;
-  src: local("./assets/SourceSansPro-Bold.otf");
+  font-family: k2d;
+  src: url(./K2D-Regular.ttf);
 }
 
+/* Global styles */
 html,
 body {
   width: 100%;
   height: 100%;
+  font-size: 62.5%;
 }
 * {
+  font-family: k2d;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 2rem;
+}
+.button {
+  background-color: #548b88;
+  color: white;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 1rem;
+  transition: all 1s ease;
+}
+.button:hover {
+  background-color: transparent;
+  color: black;
+  border: 0.3rem solid #548b88;
+}
+header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  color: #c9c9c9;
+}
+.desktop-mode h2,
+.mobile-mode .navbar-brand {
+  font-size: 4rem;
+  color: #c9c9c9;
+}
+ul li {
+  list-style-type: none;
+}
+ul a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.5s ease;
+}
+ul a:hover {
+  text-decoration: none;
+  color: rgba(50, 50, 50, 0.8);
+}
+.a_focus {
+  color: rgba(55, 55, 55, 1);
+  border-bottom: 0.2rem solid green;
+}
+
+/* ul a:visited {
+  border-bottom: 0.2rem solid green;
+  font-size: 10rem;
+} */
+.navbar-scrolled {
+  background-color: #fff !important;
+  transition: background-color 0.5s linear;
+}
+.navbar-scrolled-color {
+  color: black !important;
+}
+
+/* section Home */
+#home {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+#home h1 {
+  font-size: 7vw;
+  letter-spacing: 2rem;
+  background: linear-gradient(
+    0deg,
+    rgba(121, 121, 121, 1) 0%,
+    rgba(237, 237, 237, 1) 55%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: k2d;
+  font-weight: bold;
+}
+#home p {
+  color: rgb(235, 235, 235);
+}
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./img/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(50%);
+  z-index: -1;
+}
+/* About */
+#about {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    0deg,
+    rgba(45, 45, 45, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: 100%;
+}
+#about::before {
+  position: absolute;
+  content: "";
+  background: url("./img/ipad.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* z-index: -1; */
+}
+#aboutUs {
+  margin-top: 20rem;
+}
+#aboutUs h2 {
+  font-size: 3vw;
+  margin-bottom: 4rem;
+}
+#projects {
+  min-height: 100vh;
+  width: 100%;
+  padding: 10rem 0;
+  background-color: #f8f9fb;
+}
+#firstProjectTitle {
+  border-left: 1rem solid #548b88;
+}
+.details {
+  font-size: 1.7rem;
+  color: #c9c9c9;
+}
+.bg-dark {
+  background-color: #000000 !important;
+}
+.hr {
+  background-color: #548b88;
+  height: 0.8rem;
+  width: 30%;
+}
+#firstProject {
+  margin: 10rem 0;
+}
+
+#contact {
+  min-height: 100vh;
+
+  position: relative;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#contact::before {
+  content: "";
+  background-image: url(./img/bg-signup.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.subscribe {
+  margin: 10rem 0 0 0;
+}
+#form input {
+  width: 100%;
+  height: 5rem;
+  padding: 0 1rem;
+  color: #c9c9c9;
+  outline: none;
+}
+#form input::placeholder {
+  color: #c9c9c9;
+}
+.cards {
+  margin-top: 20rem;
+}
+footer {
+  background-color: #000;
+  padding: 5rem 0;
+  width: 100%;
+}
+.socialMedias {
+  background-color: rgb(80, 80, 80);
+  margin: 0 1rem;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.socialMedias img {
+  max-width: 4rem;
 }
