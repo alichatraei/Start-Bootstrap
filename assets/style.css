@@ -74,7 +74,9 @@ ul a:hover {
 .navbar-scrolled-color {
   color: black !important;
 }
-
+.navbar-toggler {
+  border-color: #548b88 !important;
+}
 /* section Home */
 #home {
   min-height: 100vh;
